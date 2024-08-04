@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <link rel="stylesheet" type="text/css" href="/static/style/student.css">
+</head>
+<body>
+<div class="container">
+    <h1>Student Information</h1>
+    <div class="student-profile">
+        <img src="/static/images/{{ student.id }}.webp" alt="Student photo">
+        <div class="student-info">
+            <h2>ID: {{ student.id }}</h2>
+            <p><strong>Full Name:</strong> {{ student.first_name }} {{ student.last_name }}</p>
+            <p><strong>Email:</strong> {{ student.email }}</p>
+            <p><strong>Date of Birth:</strong> {{ student.date_of_birth }}</p>
+            <p><strong>Address:</strong> {{ student.address }}</p>
+            <p><strong>Enrollment Year:</strong> {{ student.enrollment_year }}</p>
+            <p><strong>Course:</strong> {{ student.course }}</p>
+            <p><strong>Major:</strong> {{ student.major }}</p>
+            <p><strong>Special Notes:</strong> {{ student.special_notes }}</p>
+        </div>
+    </div>
+    <a href="/pages/students" class="submit-button">Return to Students List</a>
+</div>
+</body>
+</html>

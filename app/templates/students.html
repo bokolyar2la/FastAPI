@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students List</title>
+    <link rel="stylesheet" type="text/css" href="/static/style/student.css">
+</head>
+<body>
+<div class="container">
+    <h1>Students List</h1>
+    <div>
+        {% for student in students %}
+        <div class="student-card">
+            <img src="/static/images/{{ student.id }}.webp" alt="Student photo">
+            <div class="details">
+                <h2>ID: {{ student.id }}</h2>
+                <p>Full name: {{ student.first_name }} {{ student.last_name }}</p>
+                <p>Email: {{ student.email }}</p>
+                <p>Speciality: {{ student.major }}</p>
+                <p>Student course: {{ student.course }}</p>
+            </div>
+            <a href="/pages/students/{{ student.id }}" class="view-button">View all information</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>
